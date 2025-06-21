@@ -577,7 +577,7 @@
     if (!config.hasOwnProperty('pieceTheme') ||
         (!isString(config.pieceTheme) && !isFunction(config.pieceTheme))) {
       //config.pieceTheme = 'img/chesspieces/wikipedia/{piece}.png'
-      config.pieceTheme = 'src/lib/chessboardjs/img/chesspieces/wikipedia/{piece}.png'
+      config.pieceTheme = '/img/chesspieces/wikipedia/{piece}.png'
     }
 
     // animation speeds
