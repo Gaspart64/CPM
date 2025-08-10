@@ -39,6 +39,40 @@ html, body {
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Left panel styling */
+.next-moves {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+}
+
+.next-moves h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.move-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.move-boxes input {
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 
 .pausedBoard {
 	opacity:50%;
