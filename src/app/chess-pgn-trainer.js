@@ -1823,3 +1823,4 @@ document.onreadystatechange = () => {
 };
 
 export { resetGame, postPGNReadSetup };
+
