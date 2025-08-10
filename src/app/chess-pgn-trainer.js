@@ -1811,6 +1811,41 @@ $(() => {
 	});
 
 });
+// In your main JavaScript (e.g., puzzle.js or app.js)
+// Assuming there’s a PGN loader/util that gives you an array of moves per puzzle:
+let expectedMoves = []; 
+let currentPuzzle = 0;
+
+function loadPuzzle(index) {
+  const puzzle = pgnLoader.getPuzzle(index); // existing function
+  expectedMoves = puzzle.moves; // array of SAN strings
+  currentPuzzle = index;
+  document.getElementById('typedMoves').value = '';
+  document.getElementById('verificationMessage').textContent = '';
+}
+
+document.getElementById('verifyMovesBtn').addEventListener('click', () => {
+  const userMoves = document.getElementById('typedMoves').value
+    .trim()
+    .split(/\s+/);
+  
+  if (userMoves.length !== expectedMoves.length) {
+    showMessage('Incorrect number of moves. Please try again.');
+    return;
+  }
+  
+  const isCorrect = userMoves.every((mv, idx) => mv === expectedMoves[idx]);
+  if (isCorrect) {
+    showMessage('Correct! Loading next puzzle…');
+    loadPuzzle(currentPuzzle + 1);
+  } else {
+    showMessage('Incorrect sequence. Please type exactly the moves from the puzzle.');
+  }
+});
+
+function showMessage(msg) {
+  document.getElementById('verificationMessage').textContent = msg;
+}
 
 /**
  * Initialze the application once everything is loaded
@@ -1823,3 +1858,4 @@ document.onreadystatechange = () => {
 };
 
 export { resetGame, postPGNReadSetup };
+
