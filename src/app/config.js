@@ -84,7 +84,7 @@ const configuration = {
 		pieceThemePath: './img/chesspieces/staunty/{piece}.svg',
 		// Could also point to a hosted path instead like this:
 		// pieceThemePath: 'https://github.com/lichess-org/lila/raw/refs/heads/master/public/piece/alpha/{piece}.svg'
-		pieceThemePathRoot: '/CPM/img/chesspieces/',
+		pieceThemePathRoot: './img/chesspieces/',
 
 		themeImgRootPath: '../src/components/themes/',
 		themeProfiles: [
