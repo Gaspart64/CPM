@@ -127,7 +127,7 @@ function loadPGNFile(PGNFile) {
 
 		// Split the variants out and add each puzzle to the final testing set.
 		puzzlesetOriginal.forEach((puzzle) => {
-			puzzleset.push(...splitvariants(puzzle));
+			//puzzleset.push(...splitvariants(puzzle));
 		});
 
 		return puzzleset;
