@@ -81,7 +81,7 @@ const configuration = {
 
 	// Theme details for light/dark modes
 	theme: {
-		pieceThemePath: '/CPM/img/chesspieces/staunty/{piece}.svg',
+		pieceThemePath: './img/chesspieces/staunty/{piece}.svg',
 		// Could also point to a hosted path instead like this:
 		// pieceThemePath: 'https://github.com/lichess-org/lila/raw/refs/heads/master/public/piece/alpha/{piece}.svg'
 		pieceThemePathRoot: '/CPM/img/chesspieces/',
